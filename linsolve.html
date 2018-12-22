@@ -22,7 +22,7 @@
     
     /* Add a gray background color and some padding to the footer */
     .jumbotron{
-        background-image:url("https://parkerjoncus.github.io/pictures/websiteVid.mov.gif");
+        background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Singular-Value-Decomposition.svg/220px-Singular-Value-Decomposition.svg.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100%;
@@ -74,7 +74,9 @@
         <div class="container-fluid bg-3 text-center"  style="width: 770px">
             <h1 style="color:#999999">Linear System Solver Analysis</h1><br>
             <p style="color:#999999">In my graduate level computational mathematics course at Illinois Tech, we were assigned a project to analysis the stability and time complexity of different matrix decomposition algorithms. When solving a large linear system, matricies can get very large and difficult to be solved directly. Therefore, there are different methods that can be used to turn the original matrix intro a product of many matricies with special properties, so that it can be solved much easier and quicker. The solution to the decomposition will then be an approxiamte solution to the origianl matrix. The solution will not be exact in most case becuase since computers can only store a finite amount of information, there can be small roundoff error during the decomposition which will result in the decomposition being slightly different than the origianl matrix. Depending on the properties of the original matrix, this error may be irrelevant or very significant. We can measure this error by comparing the approximate decomposition with the original matrix to see if the decomposition matrix is stable and we can trust the solution. We also care about how long a decomposition method takes to run, so we also timed the different methods and compared them. For this project we used large symmmetric matricies and we chose to analyse three popular decomposition methods; Choleski factorization, Singular Value Decomposition, and QR Decomposition. The code for this project can be found on my GitHub page and the link to the project report is below.</p>
-            <li><a href="report.pdf">Report</a></li>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-dark btn-lg center-block" onclick=" window.open('Math_477577_Project_Report.pdf','_blank')"> Report</button>
         </div>
         
         <footer class="w3-container w3-center w3-large">
