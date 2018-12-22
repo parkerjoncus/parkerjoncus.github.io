@@ -22,7 +22,7 @@
     
     /* Add a gray background color and some padding to the footer */
     .jumbotron{
-        background-image:url("https://parkerjoncus.github.io/pictures/websiteVid.mov.gif");
+        background-image:url("http://support.sas.com/documentation/cdl/en/orcpug/59630/HTML/default/images/fla19un.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: auto 100%;
@@ -74,7 +74,9 @@
         <div class="container-fluid bg-3 text-center"  style="width: 770px">
             <h1 style="color:#999999">Machine Job Scheduler Program</h1><br>
             <p style="color:#999999">In my Introduction to Algorithms computer science course, we were tasked with scheduling a list of jobs on a number of machines given the jobs' start and end times. Each machine can only work on a single job at a time, and our goal is to perform the maximum number of jobs in total over all of the mcahines. My partner and my approach to this problem was to use a greedy algortihm which will sort the jobs by their finish times and scehdule them by that sorted list so long as the next job in question is compatible (start and finish times do not overlap) with the already scheduled jobs on the machine. This algorithm is typically used for a single machine with many jobs and it will provide a scheduling such that the maximum number of jobs are performed on the machine. We then used this idea, but just applied it to multiple machines by iterativly running the greedy algorthim on each machine one at a time and removing the jobs that get scheduled. This algorithm will produce a listing of jobs on each machine such that the maximum number of jobs will be performed. This is because since the greedy algorithm guarantees that the first machine will perform the maximum number of jobs that it can and will leave the jobs that it cannot perform. The next machine will then schedule the maximum number of jobs that it can perform leaving another list and so on until all jobs are scheduled or all machines are full. Since each machine is maximized on how many jobs it can perform, the total number of jobs performed will also be maximized. The code for this project can be found on my GitHub page and the report can be found in the link below. </p>
-            <li><a href="report.pdf">Report</a></li>
+        </div>
+        <div class="text-center">
+            <button type="button" class="btn btn-dark btn-lg center-block" onclick=" window.open('CS_430_Project.pdf','_blank')"> Report</button>
         </div>
         
         <footer class="w3-container w3-center w3-large">
