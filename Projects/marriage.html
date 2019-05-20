@@ -22,7 +22,7 @@
                         
                         /* Add a gray background color and some padding to the footer */
                         .jumbotron{
-                        background-image:url("https://parkerjoncus.github.io/pictures/IMG_5078.JPG");
+                        background-image:url("https://cdn-images-1.medium.com/max/543/1*ME9Qli0uDQiDQD0hsaIiug.png");
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: auto 100%;
@@ -52,12 +52,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="active"><a href="projects.html">Projects</a></li>
-                        <li><a href="athletics.html">Athletics</a></li>
-                        <li><a href="Gallery.html">Photos</a></li>
-                        <li><a href="contact.html">Contact</a></li> <!--TODO--><!-- Can put links in by replacing #-->
+                        <li><a href="../Mainpages/index.html">Home</a></li>
+                        <li><a href="../Mainpages/about.html">About</a></li>
+                        <li class="active"><a href="../Mainpages/projects.html">Projects</a></li>
+                        <li><a href="../Mainpages/athletics.html">Athletics</a></li>
+                        <li><a href="../Mainpages/Gallery.html">Photos</a></li>
+                        <li><a href="../Mainpages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -73,8 +73,8 @@
         </div>
         
         <div class="container-fluid bg-3 text-center"  style="width: 770px">
-            <h1 style="color:#999999">Student Cluster Competition</h1><br>
-            <p style="color:#999999">During the Summer and Fall of 2018, I was working on preparing with other students for the Student Cluster Competition. The Student Cluster Competition is a competition held at the Super Computing Conference each year that has undergraduate and high school students build a small cluster to run 6 different applications as fast as possible. The main restictions are that all the hardware that is used must be commercially availible and during the competition, we must keep our power usage under 3,000 Watts of power. To prepare for the competition, we compiled the applications and their dependancies on local machines at Illinois Tech. Once we were familiar with how to compile the applications, we ran them on some different test data sets to see how they perform. Since we want to run them as fast as we can we did many tests to tune the applications to run faster. This tuning included both the tuning of hyperparameters within the appliactions as well as trying different compilers and dependancies for the applications. During the summer, the team only consisted of me and one other student, so we focused more on the main benchmarking application High Perforamance Linpak (HPL). We wrote many scripts in linux to automatically run HPL and gather the power and FLOP (floating point operations) count to later analyze to determine the best configuration to run HPL. In the Fall, 5 other students joined our team to prepare for the competition. We split up the workload of 4 of the other applications so that we could each be very familiar with certain applications. The aplication that I was focusing on was Horovod, a machine learning framework for tensorflow. We had many different struggles throughout the competition, but the main struggle that we had was just not having a lot of time to prepare. During the summer we had a full team adn ended up losing all but two, so we had to find more that were interested and get them prepared in a couple of months. Also, the hardwware that we ordered did not arrive until a week before the competition, so we only had a few days to work on the cluster itself and compile everything we needed for the competion, before we shipped it off to Dallas. In the end we managed to get everything working pretty well before the competion and did really well.</p>
+            <h1 style="color:#999999">Stable Marriage Problem</h1><br>
+            <p style="color:#999999">In one of my first classes at IIT, we were given the project of studying and implementing the stable marriage problem. This problem is a simple matching problem where you are trying to match men and women together based on their preferences such that the matchings are stable. The matchings are stable if there is no male and female such that they will both leave their current match for each other because they both prefer each other over their current match. The algorithm for this is to simply match each male with their first choice. If their first choice is already taken then you will then look at the females ordering and match her with who she prefers. For the male that was not selected, he will then be matched with his next prefered and so on until everyone is paired up. One of the weird outcomes of the algorithm is that whichever gender gets to choose will get their best possible match while the other gender will get their worst possible stable matching. This algorithm is still used in sorts today, mainly with medical students selecting the hospitals they want to intern or work at and hospitals choosing which students they want. The code for this project was creted in matlab but it was lost to my old computer being damaged by water.</p>
         </div>
         
         <footer class="w3-container w3-center w3-large">
