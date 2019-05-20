@@ -52,12 +52,12 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="active"><a href="projects.html">Projects</a></li>
-                        <li><a href="athletics.html">Athletics</a></li>
-                        <li><a href="Gallery.html">Photos</a></li>
-                        <li><a href="contact.html">Contact</a></li> <!--TODO--><!-- Can put links in by replacing #-->
+                        <li><a href="../Mainpages/index.html">Home</a></li>
+                        <li><a href="../Mainpages/about.html">About</a></li>
+                        <li class="active"><a href="../Mainpages/projects.html">Projects</a></li>
+                        <li><a href="../Mainpages/athletics.html">Athletics</a></li>
+                        <li><a href="../Mainpages/Gallery.html">Photos</a></li>
+                        <li><a href="../Mainpages/contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -76,7 +76,7 @@
             <h1 style="color:#999999">Sudoku puzzle creater</h1><br>
             <p style="color:#999999">In my Intro to Mathematical Modeling course, another student and I worked on a project where we had to create a sudoku puzzle given a certain difficulty level. We quickly found out that the best way to create a sudoku puzzle was to randomly create a solved puzzle and then randomly delete spaces from the solved puzzle. The problem with deleting the spaces is knowing when to stop deleting spaces based on the difficulty and knowing if that space can be deleted and still only have a single solution. In order to make sure that the puzzle had a unique solution we created two brute force solvers. The first started from the top left and would try to insert every number until it worked, or go back and update until the entire puzzle was solved. The second would start from the bottom right corner and do the same. The idea is that the first solver is forward and the second is backward. Each solver would end at a solution closest to its start, the solution of the puzzle will be unique only if both the solvers have the same solution. We also needed to know when to stop deleting spaces. In order to do this, I sampled 100 puzzles of 4 different diffuculties from a sudoku website and wrote them down as a compressed matrix. This matrix was a 3 by 3 matrix where each number corresponds to the number of open spots in the corresponding sudoku box. We then found that when taking the 2-norm of these matricies, there were clear boundaries for the different difficulties. We then were able to implement these boundaries and stopped deleting spaces when passing this threshold. The full report can be found in the link below. Unfortuantly the code for the project is not on my Github page, but it is in the appendix of the report.</p>
         </div>
-        <button type="button" class="btn btn-dark btn-lg center-block" onclick=" window.open('Math380ProjectReport.pdf','_blank')"> Documentation</button>
+        <button type="button" class="btn btn-dark btn-lg center-block" onclick=" window.open('../Other/Math380ProjectReport.pdf','_blank')"> Documentation</button>
         
         <footer class="w3-container w3-center w3-large">
             <a href="https://www.linkedin.com/in/parker-joncus/" class="fa fa-linkedin w3-hover-opacity"></a>

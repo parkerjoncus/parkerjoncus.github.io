@@ -12,9 +12,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <style>
     /* Remove the navbar's default margin-bottom and rounded borders */
-    body{
-        background-color: #222222;
-    }
     .navbar {
         margin-bottom: 0;
         border-radius: 0;
@@ -22,25 +19,26 @@
     
     /* Add a gray background color and some padding to the footer */
     .jumbotron{
-        background-image:url("https://parkerjoncus.github.io/pictures/mult1.png");
-        background-repeat: no-repeat;
         background-position: center;
-        background-size: auto 100%;
+        background-size: cover;
+        background-color: #666666;
     }
-    .footer {
+    footer {
         background-color: #222222;
         padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 100px;
+    }
+    body{
+        background-color: #666666;
     }
     a{
         color: #FA9A27;
     }
 }
-    </style>
+                </style>
     </head>
     
-<body>
-        
+    <body>
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -54,40 +52,39 @@
                     <ul class="nav navbar-nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li class="active"><a href="projects.html">Projects</a></li>
+                        <li><a href="projects.html">Projects</a></li>
                         <li><a href="athletics.html">Athletics</a></li>
                         <li><a href="Gallery.html">Photos</a></li>
-                        <li><a href="contact.html">Contact</a></li> <!--TODO--><!-- Can put links in by replacing #-->
+                        <li class="active"><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         
         <div class="jumbotron" style="
-            padding-top: 200px;
+            padding-top: 20px;
             padding-left: 20px;
-            padding-bottom: 200px;
+            padding-bottom: 20px;
             padding-right: 20px;
-            background-color: #666666;
+            height: 300px;
+            margin-bottom: 250px;
             ">
+            <div class="container text-center" style="margin-bottom: 180px; padding-bottom: 50px">
+                <h1 style="color:#111111">Contact Information</h1>
+                <p style="color:#111111">Personal Email: parkerj@me.com</p>
+                <p style="color:#111111">School Email: pjoncus@hawk.iit.edu</p>
+                <p style="color:#111111">Linkedin: <a href="https://www.linkedin.com/in/parker-joncus/">https://www.linkedin.com/in/parker-joncus/</a></p>
+                <p style="color:#111111">Github: <a href="https://github.com/parkerjoncus">https://github.com/parkerjoncus</a></p>
+                <p style="color:#111111">Bitbucket: <a href="https://bitbucket.org/pjoncus/">https://bitbucket.org/pjoncus/</a></p>
+            </div>
         </div>
-        
-        <div class="container-fluid bg-3 text-center"  style="width: 770px">
-            <h1 style="color:#999999">Olympic Medalist Analysis</h1><br>
-            <p style="color:#999999">In my graduate level statistics course at Illinois Tech, we were assigned a project to peform regression analysis on a data set of our choice. Me and two others found some olympic maedalist data on Kaggle and decided to use this dataset as well as a few others to perfrom regression. Our goal of our project was to first determine the best variables that influence the times in each event for each gender. We also could easily see that times and distance/height improved over the years, but has been slowing down as well. We then had the obvious question of is there a limit for the different events and what is that limit. The first part of this question is expected to be yes, there is a limit since it is first impossible to have a negative score. Therefore, 0 is at least a limit for every event (except distance events). Now it can be argues that a little more than 0 is also impossible for running events, but what is the largest lower limit? Our plan was to create a bunch of different models, and while we also compared the models and their predictive power, we also wanted to see if they reached some limit and if this limit was realistic. We used R for our project, and our code can be found on my GitHub page. Our final project report can be found in the link below.</p>
-        </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-dark btn-lg center-block" onclick=" window.open('Regression_Final.pdf','_blank')"> Report</button>
-        </div>
-        
-        <footer class="w3-container w3-center w3-large">
+        <footer class="w3-container w3-center w3-large" style="padding-top: 32px; padding-bottom:32px;">
             <a href="https://www.linkedin.com/in/parker-joncus/" class="fa fa-linkedin w3-hover-opacity"></a>
             <a href="https://github.com/parkerjoncus" class="fa fa-github" aria-hidden="true"></a>
             <a href="https://bitbucket.org/pjoncus/" class="fa fa-bitbucket"></a>
         </footer>
-            
-            
-            
     </body>
+    
 </html>
+
 
