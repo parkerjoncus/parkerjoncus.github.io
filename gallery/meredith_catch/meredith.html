@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parker Joncus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    body{
+        background-color: #666666;
+    }
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    .jumbotron{
+        background-image: url("pictures/_DSC0330-HDR.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    footer {
+        background-color: #222222;
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    a{
+        color: #FA9A27;
+    }
+    /* Style the Image Used to Trigger the Modal */
+    .myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    
+    .myImg:hover {opacity: 0.7;}
+    
+    /* The Modal (background) */
+    .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    }
+    
+    /* Modal Content (Image) */
+    .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    }
+    
+    /* Caption of Modal Image (Image Text) - Same Width as the Image */
+    #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    }
+    
+    /* Add Animation - Zoom in the Modal */
+    .modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    }
+    
+    @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+    }
+    
+    @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+    }
+    
+    /* The Close Button */
+    .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    }
+    
+    .close:hover,
+    .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px){
+    .modal-content {
+    width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../MainPages/about.html">About</a></li>
+                <li><a href="../../MainPages/projects.html">Projects</a></li>
+                <li><a href="../../MainPages/athletics.html">Athletics</a></li>
+                <li class="active"><a href="../../MainPages/Gallery.html">Photos</a></li>
+                <li><a href="../../MainPages/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid bg-3 text-center">
+    <h1 style="color:#111111">Catch with Meredith</h1>
+    <p style="color:#111111"> August 24, 2019 </p>
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-1.jpg" style="width: 600px;">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-2.jpg" style="width: 600px;">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img02">
+                <div id="caption"></div>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-3.jpg" style="width: 600px;">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img03">
+                <div id="caption"></div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-4.jpg" style="width: 600px;">
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img04">
+                <div id="caption"></div>
+            </div>
+        </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-5.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img05">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-6.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img06">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-7.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img07">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-8.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img08">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-9.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img09">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-10.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img10">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-11.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img11">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-12.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img12">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-13.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img13">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-14.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img14">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-15.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img15">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-16.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img16">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-17.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img17">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-18.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img18">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-19.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img19">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-20.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img20">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-21.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img21">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-22.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img22">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-23.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img23">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-24.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img24">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-25.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img25">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-26.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img26">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-27.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img27">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-28.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img28">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-29.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img29">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-30.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img30">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-31.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img31">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-32.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img32">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-33.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img33">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-34.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img34">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-35.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img35">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-36.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img36">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-37.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img37">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-38.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img38">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-39.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img39">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-40.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img40">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-41.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img41">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-42.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img42">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-43.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img43">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-44.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img44">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-45.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img45">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-46.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img46">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-47.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img47">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-48.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img48">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+
+<div class="container-fluid bg-3 text-center">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="myImg" src="catch-49.jpg" style="width: 600px;">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img49">
+                        <div id="caption"></div>
+                        </div>
+                </div>
+    </div>
+</div><br>
+    
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = $('.myImg');
+        var modalImg = $("#img01");
+        var captionText = document.getElementById("caption");
+        $('.myImg').click(function(){
+            modal.style.display = "block";
+            var newSrc = this.src;
+            modalImg.attr('src', newSrc);
+            captionText.innerHTML = this.alt;
+        });
+                          
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+                          
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    </script>
+<footer class="w3-container w3-center w3-large" style="padding-top:32px; padding-bottom:32px">
+        <a href="https://www.linkedin.com/in/parker-joncus/" class="fa fa-linkedin w3-hover-opacity"></a>
+        <a href="https://github.com/parkerjoncus" class="fa fa-github" aria-hidden="true"></a>
+        <a href="https://bitbucket.org/pjoncus/" class="fa fa-bitbucket"></a>
+    </footer>
+
+
+
+
+</body>
+</html>
