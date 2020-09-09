@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <title>Parker Joncus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    body{
+        background-color: #222222;
+    }
+    .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    .jumbotron{
+        background-image:url("https://parkerjoncus.github.io/pictures/parkingtickets.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
+    }
+    .footer {
+        background-color: #222222;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    a{
+        color: #FA9A27;
+    }
+}
+    </style>
+    </head>
+    
+<body>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../MainPages/about.html">About</a></li>
+                        <li class="active"><a href="../MainPages/projects.html">Projects</a></li>
+                        <li><a href="../MainPages/athletics.html">Athletics</a></li>
+                        <li><a href="../MainPages/Gallery.html">Photos</a></li>
+                        <li><a href="../MainPages/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="jumbotron" style="
+            padding-top: 200px;
+            padding-left: 20px;
+            padding-bottom: 200px;
+            padding-right: 20px;
+            background-color: #666666;
+            ">
+        </div>
+        
+        <div class="container-fluid bg-3 text-center"  style="width: 770px">
+            <h1 style="color:#999999">Chicago Parking Tickets</h1><br>
+            <p style="color:#999999">I worked on a project in collaboration with Propublica. Propublica gave us parking ticket data or the city of Chicago. We were asked to come up with our own questions and solve them. One thing that we discovered was how many people recived duplciate parking tickets. For some parking tickets like parking in a no parking zone would be understnadable, but people were getting duplicate tickets for the city stickers or plates being expired. A duplicate ticket is defined by reciveing more than 1 ticket for the same reason in the same day. When we looked closly at some of the duplicate tickets, we found that in some cases these duplicate tickets were written by the same person within minutes of each other. We also noticed that the ones that typically wrote dupicate tickets were not police officers but the contracted ticket writers. We did more analysis and tried to run some predictive models to determine the factors that lead to people being more likely to get a duplicate ticket. We gave this information to Propublica. They were already somewhat aware of the duplicate tickets and were in the process of filing a lawsuit against the city. Our code and report can be found on my <a href="https://github.com/parkerjoncus/parking-tickets" target="_blank">GitHub</a>.
+        </div>
+        
+        <footer class="w3-container w3-center w3-large">
+            <a href="https://www.linkedin.com/in/parker-joncus/" class="fa fa-linkedin w3-hover-opacity"></a>
+            <a href="https://github.com/parkerjoncus" class="fa fa-github" aria-hidden="true"></a>
+            <a href="https://bitbucket.org/pjoncus/" class="fa fa-bitbucket"></a>
+        </footer>
+            
+            
+            
+    </body>
+</html>
+
